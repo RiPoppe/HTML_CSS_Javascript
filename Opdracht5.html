@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <style>
+        div {
+            display: list-item;
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Maak de 4 knoppen -->
+    <button id="A" onclick="doSomething('A');"> A </button>
+    <button id="B" onclick="doSomething('B');"> B </button>
+    <button id="C" onclick="doSomething('C');"> C </button>
+    <button id="D" onclick="doSomething('D');"> D </button>
+    <!-- Maak de lijst van gedrukte knoppen -->
+    <div id="history"></div>
+</body>
+
+</html>
+
+<script>
+    var A = 0;
+    var B = 0;
+    var C = 0;
+    var D = 0;
+
+    function showMessage(count, knop) {
+        if (count == 0) {
+            // Maak een nieuw element in de list van div:history
+            var history = document.getElementById("history");
+            var item = document.createElement("li");
+            // Voeg de text toe aan item en voeg item toe aan de list history
+            item.appendChild(document.createTextNode("U heeft op knop " + knop + " geklikt"));
+            history.appendChild(item);
+        } else {
+            // Als er al eerder op de knop gedrukt is geef een alert
+            alert("U heeft al " + count + "x op " + knop + " gedrukt");
+        }
+
+    }
+
+    // Voer de knop uit
+    function doSomething(knop) {
+        // Kijk welke knop er is gedrukt en voer de bijbehorende showMessage uit
+        if (knop == 'A') {
+            showMessage(A, knop);
+            A++;
+            console.log("A=" + A);
+        } else if (knop == 'B') {
+            showMessage(B, knop);
+            B++;
+            console.log("B=" + B);
+        } else if (knop == 'C') {
+            showMessage(C, knop);
+            C++
+            console.log("C=" + C);
+        } else if (knop == 'D') {
+            showMessage(D, knop);
+            D++
+            console.log("D=" + D);
+        }
+    }
+</script>

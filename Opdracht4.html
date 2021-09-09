@@ -12,10 +12,10 @@
 
 <body>
     <!-- Maak de 4 knoppen -->
-    <button id="A" onclick="doSomething('A\n');"> A </button>
-    <button id="B" onclick="doSomething('B\n');"> B </button>
-    <button id="C" onclick="doSomething('C\n');"> C </button>
-    <button id="D" onclick="doSomething('D\n');"> D </button>
+    <button id="A" onclick="doSomething('A');"> A </button>
+    <button id="B" onclick="doSomething('B');"> B </button>
+    <button id="C" onclick="doSomething('C');"> C </button>
+    <button id="D" onclick="doSomething('D');"> D </button>
     <!-- Maak de lijst van gedrukte knoppen -->
     <div id="history"></div>
 </body>
@@ -27,9 +27,9 @@
     function doSomething(knop) {
         // Maak een nieuw element in de list van div:history
         var history = document.getElementById("history");
-        var item = document.createElement("item");
+        var item = document.createElement("li");
         // Voeg de text toe aan item en voeg item toe aan de list history
-        item.appendChild(document.createTextNode("U heeft op knop " + knop + "geklikt"));
+        item.appendChild(document.createTextNode("U heeft op knop " + knop + " geklikt"));
         history.appendChild(item);
     }
 </script>
