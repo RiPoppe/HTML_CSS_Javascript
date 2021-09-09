@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    Invoer: <input id="invoer" type="text" />
+    <button id="knop" onclick="doSomething();"> Doe iets</button>
+</body>
+
+</html>
+
+<script>
+    function doSomething() {
+        // Lees de invoer
+        str = document.getElementById("invoer").value;
+        // Als de input 'hallo' is print 'welkom'
+        if (str == "hallo") {
+            alert("Welkom");
+
+        }
+        // als de input 'doei' is print 'tot de volgende keer'
+        if (str == "doei") {
+            alert("Tot de volgende keer");
+
+        }
+    }
+</script>

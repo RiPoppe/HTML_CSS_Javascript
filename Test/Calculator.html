@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    <!-- Maak invoer A -->
+    Number A: <input id="NumberA" type="text" />
+    <!-- Maak invoer B -->
+    Number B: <input id="NumberB" type="text" />
+
+    <!-- Maak de optel knop -->
+    <button id="add" onclick="add();">
+        +
+    </button>
+
+    <!-- Maak de aftrek knop -->
+    <button id="subtract" onclick="subtract();">
+        -
+    </button>
+
+    <!-- Maak de vermenigvuldig knop -->
+    <button id="multiply" onclick="multiply();">
+        *
+    </button>
+
+    <!-- Maak de deel knop -->
+    <button id="divide" onclick="divide();">
+        /
+    </button>
+
+    <!-- Maak de paragraaf met het antwoord en geef hem nog geen getal -->
+    <p id="ans">
+        The answer =
+    </p>
+
+</body>
+
+</html>
+
+<script>
+    function readInput() {
+        // Leest de waardes uit invoer A en B
+        var a = parseInt(document.getElementById("NumberA").value);
+        var b = parseInt(document.getElementById("NumberB").value);
+        
+        //geef a en b terug aan de roeper van de functie
+        return [a, b];
+    }
+
+
+    function add() {
+        // lees de waardes uit de invoer
+        [a, b] = readInput();
+
+        // verander de waarde van paragraph in het antwoord door het antwoord achter de string te plakken
+        document.getElementById("ans").innerHTML = "The answer = " + (a + b);
+
+    }
+    function subtract() {
+        // lees de waardes uit de invoer
+        [a, b] = readInput();
+
+        // verander de waarde van paragraph in het antwoord door het antwoord achter de string te plakken
+        document.getElementById("ans").innerHTML = "The answer = " + (a - b);
+
+    }
+
+    function multiply() {
+        // lees de waardes uit de invoer
+        [a, b] = readInput();
+
+        // verander de waarde van paragraph in het antwoord door het antwoord achter de string te plakken
+        document.getElementById("ans").innerHTML = "The answer = " + (a * b);
+
+    }
+    function divide() {
+        // lees de waardes uit de invoer
+        [a, b] = readInput();
+
+        // verander de waarde van paragraph in het antwoord door het antwoord achter de string te plakken
+        document.getElementById("ans").innerHTML = "The answer = " + (a / b);
+
+    }
+</script>

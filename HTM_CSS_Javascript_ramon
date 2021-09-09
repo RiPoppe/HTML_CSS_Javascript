@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
+<!--
+        OPDRACHT 1
+        3 teksten
+        1 table 3 rijen met 4 koloommen
+        2 afbeeldingen
+     -->
+<!--
+        OPDRACHT 2
+        Stijl minimaal 5 elementen, gebruik width color background-color, border, height
+    -->     
+
+    <!--
+    CSS stylen kan met: 
+        in de HTML element
+        classes: .naame { styling }
+        met ID
+
+-->
+<!--
+    OPDRACHT 3
+    twee van elke selectors toepassen in HTML
+    2 element
+    class
+    ID selectors
+-->
+
+<!--
+    Box vs container:
+    container grootte hebben "margin" en "padding"
+        margin invloed de ruimte er omheen, veranderd niet de achtergrond
+        padding invloed op de binnenkant van de container, dus heeft wel invloed op de grootte van de background
+-->
+
+<!--
+    OPDRACHT 4
+    van 3 elementen de margin en padding aanpassen
+-->
+
+<!-- maak 3 fucnties die verschillende stylings veranderen en roen alle 3 aan en als je van een uitdaging houdt, 
+    hoe zou je vanuit de eerste function de tweede kunnen aanroepen-->
+    
+<!-- Maak een button die bij het klikken de huidige datum in een element plaatst
+document.getElementbyId("id").innerHTML = new Date()
+-->    
+
+
+<head>
+    <title>Nissan Skyline R34</title>
+</head>
+
+
+
+<body style="background-color: darkgray;">
+<div class="centercontent">    
+    <!--Intro div-->
+    <div>
+        <h1 style="
+            color:blue; 
+            background-color: gray;
+            width: 300px;
+            margin: auto;
+            ">Nissan Skyline R34</h1>
+            <h2 id="top_text" style="padding: 20px">Achtergrond</h2>
+            <button onclick="newDate()">What's the date?!</button>
+                <p class="textbackground">The GT-R reappeared in 1999, with a revised chassis and other updates. The R34 turbos received a ball bearing core. <br/> 
+                    The R34 N1 turbos had a metal exhaust wheel, and ball bearing center section. <br/>
+                    The turbo outlet pipes were changed from cast to formed metal outlets. The intercooler outlet side and rear turbo dump pipe had temperature probes fitted in 
+                    the V-spec models. </p>
+                <!--<button onclick="changeColor" button>Change Color!</button>-->
+                    <img id="image" onclick="changeColor()"style="border: 5px blue solid;" alt="skyline front" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Nissan_Skyline_GT-R_R34_V_Spec_II.jpg/2560px-Nissan_Skyline_GT-R_R34_V_Spec_II.jpg" width="750"/>           
+    </div>   
+    <!--Tabel div-->
+    <div>
+        <h1>Versies</h1>
+
+        <table id="demo_table">
+            <!--Table kolom namen-->
+            <tr>
+                <td><b>Model</b></td>
+                <td><b>Specifications</b></td>
+                <td><b>HP</b></td>
+                <td><b>Special</b></td>
+
+            </tr>
+            <!-- Table inhoud-->
+            <tr>
+                <td>GT-R</td>
+                <td>2.6 L RB26DETT twin-turbo I6, 327 hp; 244 kW (332 PS) 392 N⋅m (289 lb⋅ft)</td>
+                <td>276</td>
+                <td>Hoi</td>
+
+            </tr>
+            <tr>
+                <td>GT-R V·spec</td>
+                <td>Additional aero parts, brake ventilation ducts, diffuser, ALSD.</td>
+                <td>276</td>
+                <td>Hoi</td>
+            </tr>
+            <tr>
+                <td>GT-R V·spec II</td>
+                <td>As V·spec + carbon fibre hood with NACA duct.</td>
+                <td>276</td>
+                <td>Hoi</td>
+            </tr>
+            <tr>
+                <td>GT-R V·spec II Nür</td>
+                <td>As above V·spec II + N1 motor, 300 km/h speedometer. (only 750 made)</td>
+                <td>Hoi</td>
+                <td>Hoi</td>
+            </tr>
+            <tr>
+                <td>GT-R NISMO Z-tune</td>
+                <td>2.8 L (bored and stroked) 'RB28DETT' twin-turbo I6, 500 PS (368 kW; 493 hp), 540 N⋅m (398 lb⋅ft) Z1 and Z2 (Only 20 made)</td>
+                <td>Hoi</td>
+                <td>Hoi</td>
+            </tr>
+        </table>
+        <img style="border: 5px blue solid; margin: 1%"
+        alt="skyline back"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Nissan_Skyline_GT-R_R34_V_Spec_II_rear.jpg/2560px-Nissan_Skyline_GT-R_R34_V_Spec_II_rear.jpg" width="750"/>
+    </div>
+
+    <!--Source link-->
+    <div>
+        <a href="https://nl.wikipedia.org/wiki/Nissan_Skyline"> Source </a>
+    </div>
+
+    <!--Lijsten, Unordered List, Ordered List-->
+    <div id=demo_list>
+        <ul>
+            <li>Eerste</li>
+            <li>Tweede</li>
+            <li>Derde</li>
+        </ul>
+
+        <ol>
+            <li>Eerste</li>
+            <li>Tweede</li>
+            <li>Derde</li>
+        </ol>
+    </div>
+    <div style="margin: 30%; width: 906px; ">
+        <input id="field1" type="text"/>
+        <input id="field2" type="text"/> 
+        <button onclick="readValuesAdd()"> Add </button>    
+        <button onclick="readValuesSub()"> Sub </button>
+        <button onclick="readValuesMult()"> Mult </button>
+        <button onclick="readValuesDiv()"> Div </button>
+    </div>
+
+
+
+   
+</div>
+</body>
+</html>
+
+<style>
+    .centercontent {
+        max-width: 960px;
+        margin: auto;
+        
+        }
+    .textbackground {
+        background-color: magenta;
+    }
+
+    h1 {
+        color: blue;
+        
+        }
+
+    h2 {
+        background-color: royalblue;
+    }
+
+    #demo_table {
+        font-size: 140%;
+        background-color: royalblue;
+    }
+    
+    #demo_list {
+        font-size: 120%;
+        background-color: royalblue;
+    }
+</style>
+<script>
+    //FUNCTIES
+    //een gegroepeerd stukje code dat je kan aanroepen
+    //van boven naar benede uitgevoerd
+    //voorbeeld: vragen naar eten in een restaurant (metafor)
+    var counter = 0
+
+    function makeBoxGreen() {
+        //alles tussen curly brackets= "codeblock"
+        var p4 = document.getElementById('demo_table')
+        p4.style.backgroundColor = 'green'
+        
+        console.log("box = green")
+    }
+
+    function makeBoxRoyalblue() {
+        var p4 = document.getElementById('demo_table')
+        p4.style.backgroundColor = 'royalblue'
+        
+        console.log("box is blue")
+
+    }
+    function changeColor() {
+        
+        makeBoxGreen()
+        console.log("dit werkt")
+       
+    }
+ 
+    function newDate() {
+        console.log("testing")
+        document.getElementById('top_text').innerHTML = Date()
+
+    }
+    //Javascript wordt van boven naar beneden uitgevoerd
+    //Format: command();, puntcomma's hoeft niet perse 
+    //alert("Hoi dit is mijn popup")
+    //alert("tweede popup")
+    //maak een tijdelijke waarde aan met de naam demo_table en die wijst naar element met ID demo_table
+    function readValuesAdd() {
+        var firstNum = document.getElementById('field1').value
+        var firstCalc = parseInt(firstNum)
+        var secondNum = document.getElementById('field2').value
+        var secondCalc = parseInt(secondNum)
+        var sum = firstCalc + secondCalc
+        alert(sum)
+    }
+    function readValuesSub() {
+        var firstNum = document.getElementById('field1').value
+        var firstCalc = parseInt(firstNum)
+        var secondNum = document.getElementById('field2').value
+        var secondCalc = parseInt(secondNum)
+        var sum = firstCalc - secondCalc
+        alert(sum)
+    }
+    function readValuesMult() {
+        var firstNum = document.getElementById('field1').value
+        var firstCalc = parseInt(firstNum)
+        var secondNum = document.getElementById('field2').value
+        var secondCalc = parseInt(secondNum)
+        var sum = firstCalc * secondCalc
+        alert(sum)
+    }
+    function readValuesDiv() {
+        var firstNum = document.getElementById('field1').value
+        var firstCalc = parseInt(firstNum)
+        var secondNum = document.getElementById('field2').value
+        var secondCalc = parseInt(secondNum)
+        var sum = firstCalc / secondCalc
+        alert(sum)
+    }
+ 
+</script>
+

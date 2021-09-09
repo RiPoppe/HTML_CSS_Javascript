@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<header>
+    <title>My Wikipedia</title>
+    <style>
+        h1 {
+            color: black;
+        }
+
+        p {
+            color: whitesmoke
+        }
+
+
+        .demo {
+            border: 3px rgb(37, 36, 36) solid;
+            background-color: white;
+            color: black;
+        }
+
+        .test {
+            color: wheat;
+            background-color: darkslategrey;
+            width: 50%;
+        }
+
+        .image {
+            width: 75%;
+            padding: 1cm;
+            margin: 1cm
+        }
+
+        #table_schofthoogte {
+            font-size: 140%;
+            background-color: darkslategrey;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 15px;
+            align-self: stretch;
+
+        }
+
+        #table_image {
+            font-size: 140%;
+            background-color: rgb(28, 43, 43);
+            padding: 300 px;
+            margin: 20 px;
+        }
+    </style>
+
+</header>
+
+<body style=" height: 75%; color:white; background-color: grey; border: 5px black solid;">
+
+    <h1 id="title" onclick="fontsizeSmaller();"> Berner sennenhond</h1>
+    <b>uiterlijk</b>
+    <button onclick="showDate();">
+         Change Date
+    </button>
+    <p class="demo" id="paragraaf1" onclick="hideParagraph();">
+        The time is : <time></time>
+    </p>
+    <b class="demo">vacht</b>
+    <p class="demo">
+        De Berner Sennen heeft een stokharige vacht. Dit betekent dat de vacht uit twee lagen bestaat, een dikke laag
+        isolerende onderwol met daarboven dekhaar. De wolharen zijn zacht en dof en de dekharen zijn stugger en
+        glanzend. De vacht heeft drie kleuren; een gitzwarte basiskleur, tan-kleurige markeringen op de wangen, boven de
+        ogen, de poten en de borst. Witte markeringen zijn aanwezig op de voeten, het puntje van de staart, de borst en
+        een bles op het hoofd. Idealiter zijn zowel de tan als de witte markeringen evenwijdig verspreid over het
+        lichaam. De bles raakt de tan-kleurige markeringen boven de wenkbrauwen niet en reikt niet verder dan de
+        mondhoeken.
+    </p>
+    <table border="1" id="table_schofthoogte">
+        <tr>
+            <td><b>Geslacht </b> </td>
+            <td><b>Schofthoogte (min) </b></td>
+            <td><b>Schofthoogte (max)</b></td>
+        </tr>
+        <tr>
+            <td><b>Reu</b></td>
+            <td>64 cm</td>
+            <td>70 cm</td>
+        </tr>
+        <tr>
+            <td><b>Teef</b></td>
+            <td>58 cm</td>
+            <td>66 cm</td>
+        </tr>
+    </table>
+
+
+
+    <div>
+        <table border="1" id="table_image">
+            <tr>
+                <td>Puppy</td>
+                <td>Volwassen</td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="image" alt="een afbeelding van een berner sennen pup" src="./pup.jfif" />
+
+                </td>
+                <td>
+                    <img class="image" alt="een afbeelding van een berner sennen"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bernese_Mountain_Dog_%283346689641%29.jpg/399px-Bernese_Mountain_Dog_%283346689641%29.jpg" />
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="https://nl.wikipedia.org/wiki/Berner_sennenhond">Bron</a>
+    <ol>
+        <li>eerste</li>
+        <li>tweede</li>
+        <li>derde</li>
+    </ol>
+</body>
+
+
+
+</html>
+
+<script>
+    var tab1 = document.getElementById('table_schofthoogte');
+
+    function makeBorder() {
+        console.log("make a border");
+        tab1.style.backgroundColor = "blue";
+        tab1.style.border = "2px darklategray solid"
+
+        var demoElem = document.getElementsByClassName('demo');
+        console.log("Dit is mijn testbericht");
+    }
+
+    function makeOrange() {
+        //      var tab1 = document.getElementById('table_schofthoogte');
+        console.log("make orange");
+        tab1.style.backgroundColor = "orange";
+        tab1.style.color = "white";
+
+    }
+
+    function fontsizeSmaller() {
+        //      var tab1 = document.getElementById('table_schofthoogte');
+        var title = document.getElementById("title");
+        console.log("fontsize %10");
+        console.log("fontsize= " + window.getComputedStyle(title, null).getPropertyValue('font-size'));
+        title.style.fontSize = parseFloat(window.getComputedStyle(title, null).getPropertyValue('font-size')) - 1 + 'px';
+        console.log("fontsize changed to: " + window.getComputedStyle(title, null).getPropertyValue('font-size'));
+
+    }
+
+    function hideParagraph() {
+        document.getElementById('paragraaf1').hidden = true;
+    }
+    
+    function changeContent() {
+        document.getElementById('paragraaf1').innerHTML = new Date();
+    }
+    function showDate() {
+        document.getElementById('paragraaf1').innerHTML = new Date();
+    }
+    
+</script>
