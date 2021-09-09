@@ -18,9 +18,9 @@
         // Lees de invoer
         let woord = document.getElementById("invoerwoord").value;
         let letter = document.getElementById("invoerletter").value;
-        // Als er een 'letter' in 'woord' zit print een alert
+        // Als 'letter' in woord zit vertel het aantal keer met een alert
         if (woord.includes(letter)) {
-            alert("Er zit een " + letter + " in " + woord);
+            alert("De letter " + letter + " zit " + (woord.split(letter).length - 1) + "x  in het woord " + woord);
         } else {
             alert("Er zit geen " + letter + " in " + woord);
         }
