@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    Invoer: <input id="invoer" type="text" />
+    <button id="knop" onclick="doSomething();"> Doe iets</button>
+</body>
+
+</html>
+
+<script>
+    function doSomething() {
+        // Lees de invoer
+        let str = document.getElementById("invoer").value;
+        // Als er een e in zit print een alert
+        if (str.includes('e')) {
+            alert("Er zit een e in");
+        }
+    }
+</script>
