@@ -21,9 +21,18 @@
     // An array with the 4 season images
     const seasons = ["./Spring.png", "./Summer.png", "./Autumn.png", "./Winter.png"];
     var i = 0;
+    var year = 0;
     function doSomething() {
         // Everytime the button is presses it changes the image to the next image in seasons
+        if (i == 3) {
+            year++;
+        }
         i = (i + 1) % 4;
         document.getElementById("image").src = seasons[i];
+
+        // Show that 3 years has passed, but only when i=0 to mark the start of the year
+        if (year == 3 && i == 0) {
+            console.log("3 years has passes");
+        }
     }
 </script>
