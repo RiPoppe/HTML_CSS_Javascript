@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    <!-- Make an image and make it reference to spring -->
+    <img id="imageA" src="./Spring.png" />
+    <img id="imageB" src="./Spring.png" />
+    <!-- Make a new line -->
+    <br>
+    <!-- Make a button and let it perform doSomething() -->
+    <button id="btnA" onclick="swapSeasonA();"> Change image 1 </button>
+    <button id="btnB" onclick="swapSeasonB();"> Change image 2 </button>
+    <button id="btnC" onclick="compare();"> Compare images </button>
+
+</body>
+
+</html>
+
+<script>
+    // An array with the 4 season images
+    const seasons = ["./Spring.png", "./Summer.png", "./Autumn.png", "./Winter.png"];
+    var i = 0;
+    var j = 0;
+    var year = 0;
+    function swapSeasonA() {
+        // Everytime the button is presses it changes the image to the next image in seasons
+        i = (i + 1) % 4;
+        document.getElementById("imageA").src = seasons[i];
+    }
+
+    function swapSeasonB() {
+        // Everytime the button is presses it changes the image to the next image in seasons
+        j = (j + 1) % 4;
+        document.getElementById("imageB").src = seasons[j];
+    }
+
+    function compare() {
+        if (i == j) {
+            console.log("Hetzelfde");
+        } else {
+            console.log("Niet hetzelfde");
+        }
+    }
+</script>
