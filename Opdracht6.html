@@ -23,10 +23,11 @@
     var i = 0;
     var year = 0;
     function doSomething() {
-        // Everytime the button is presses it changes the image to the next image in seasons
+        // Keep track of the year
         if (i == 3) {
             year++;
         }
+        // Everytime the button is presses it changes the image to the next image in seasons
         i = (i + 1) % 4;
         document.getElementById("image").src = seasons[i];
 
