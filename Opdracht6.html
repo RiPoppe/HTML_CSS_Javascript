@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    <!-- Make an image and make it reference to spring -->
+    <img id="image" src="./Spring.png" />
+    <!-- Make a new line -->
+    <br>
+    <!-- Make a button and let it perform doSomething() -->
+    <button id="btn" onclick="doSomething();"> Change Season </button>
+
+</body>
+
+</html>
+
+<script>
+    // An array with the 4 season images
+    const seasons = ["./Spring.png", "./Summer.png", "./Autumn.png", "./Winter.png"];
+    var i = 0;
+    function doSomething() {
+        // Everytime the button is presses it changes the image to the next image in seasons
+        i = (i + 1) % 4;
+        document.getElementById("image").src = seasons[i];
+    }
+</script>
