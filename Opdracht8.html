@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+</head>
+
+<body>
+    <!-- Make an image and make it reference to spring -->
+    <img id="imageA" onclick="swapSeasons()" src="./Spring.png" />
+    <img id="imageB" src="./clown.jpg" />
+
+</body>
+
+</html>
+
+<script>
+    // An array with the 4 season images
+    const seasons = ["./Spring.png", "./Summer.png", "./Autumn.png", "./Winter.png"];
+    var i = 0;
+    function swapSeasons() {
+        // Everytime the button is presses it changes the image to the next image in seasons
+        i = (i + 1) % 4;
+        document.getElementById("imageA").src = seasons[i];
+        if (i == 0) {
+            document.getElementById("imageB").src = "lam.jpg";
+        } else if (i == 1) {
+            document.getElementById("imageB").src = "clown.jpg";
+        }
+    }
+
+    function compare() {
+        if (i == j) {
+            console.log("Hetzelfde");
+        } else {
+            console.log("Niet hetzelfde");
+        }
+    }
+</script>
